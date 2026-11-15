@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="220" viewBox="0 0 360 220" role="img" aria-labelledby="title">
+  <title id="title">Пиццазаврик пропал с карты</title>
+  <defs>
+    <path id="sheet" d="M30 48 118 22 203 41 306 18 331 166 229 198 140 176 48 204Z"/>
+    <path id="missing" d="M90 131Q78 116 97 102L113 91 126 91Q119 72 124 68Q131 64 146 79Q143 57 151 52Q159 49 175 72Q177 43 186 44Q197 45 207 75Q216 56 223 60Q231 64 232 88Q248 77 253 84L250 106Q264 121 282 124Q285 135 248 137L243 152Q238 163 225 155L221 142 185 145 179 159Q173 169 159 160L151 143Q113 151 90 131Z"/>
+    <clipPath id="paper"><use href="#sheet"/></clipPath>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="360" height="220"><rect width="360" height="220" fill="white"/><use href="#missing" fill="black"/></mask>
+    <pattern id="screen" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#665335" opacity=".43"/></pattern>
+  </defs>
+  <g mask="url(#cut)">
+    <use href="#sheet" fill="#fff0ba"/>
+    <g clip-path="url(#paper)">
+      <path d="m18 88 58-36 20 16-6 30-45 19Zm62 73 21-18 27 5 8 29-39 17Zm148-126 43-4 18 17-14 22-38 1Zm37 101 42-18 28 16-8 33-47 19Z" fill="#becd76"/>
+      <path d="M43 46c46 18 9 46 43 66s24 43 19 92M272 10c-19 36 39 49 7 85s41 56 19 97" fill="none" stroke="#8ccac0" stroke-width="9"/>
+      <g fill="none" stroke="#b89d6b" stroke-width="2">
+        <path d="m19 151 62-32 32-40 48-4 52-31 88 6m-235 124 73-35 47 4 36-45 91-34m-173-55 22 57-6 30 28 55 19 40m72-184-17 45 24 31-7 54 25 43"/>
+      </g>
+      <path d="m118 22 85 19 26 157-89-22Z" fill="#b86836" opacity=".16"/>
+      <path d="m118 22 10 3 22 154-10-3Z" fill="url(#screen)"/>
+      <path d="m204 41 25 154" stroke="#fffbe5" stroke-width="3"/>
+      <path d="M57 169q-7-20 12-28t21-24m174-5q12 10 26 2t12-25" fill="none" stroke="#c54d31" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="3 6"/>
+      <circle cx="57" cy="169" r="5" fill="#c54d31"/><path d="m295 81 11 10m-1-11-10 12" fill="none" stroke="#c54d31" stroke-width="4"/>
+      <use href="#missing" fill="none" stroke="#533828" stroke-width="7" transform="translate(1 3)"/>
+      <use href="#missing" fill="none" stroke="#654328" stroke-width="2"/>
+    </g>
+    <use href="#sheet" fill="none" stroke="#443121" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+</svg>
