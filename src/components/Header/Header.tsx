@@ -1,7 +1,7 @@
 import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
-import { Logo } from "../Logo";
 import { Button } from "../ui/Button";
+import { Logo } from "../ui/Logo";
 import styles from "./Header.module.css";
 
 export const Header = () => {
