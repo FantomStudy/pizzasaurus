@@ -12,16 +12,18 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "Pizzasaurus - Доставка пиццы",
-  description: "",
+  description: "Сделано с любовью к пицце и динозаврам",
 };
 
 const RootLayout = ({ children }: LayoutProps<"/">) => {
   return (
     <html lang="ru" className={nunito.variable}>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className="layout">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

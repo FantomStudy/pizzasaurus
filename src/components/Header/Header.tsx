@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <div className="container">
       <header className={styles.header}>
-        <Link href="/">
+        <Link href="/" className={styles.logo}>
           <Logo />
         </Link>
 
@@ -18,6 +18,12 @@ export const Header = () => {
           </Button>
 
           <Button variant="muted">Войти</Button>
+        </div>
+
+        <div className={styles.mobileRight}>
+          <Button variant="muted" size="md">
+            Войти
+          </Button>
         </div>
       </header>
     </div>
