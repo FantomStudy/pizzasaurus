@@ -9,9 +9,7 @@ export const Footer = () => {
     <div className="container">
       <footer className={styles.footer}>
         <nav className={styles.nav}>
-          <Link href="/">
-            <Logo />
-          </Link>
+          <Logo />
 
           <div className={styles.block}>
             <a href="tel:890683346355">8 906 834-63-55</a>

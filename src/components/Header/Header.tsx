@@ -1,5 +1,4 @@
 import { ShoppingBag } from "lucide-react";
-import Link from "next/link";
 import { Button } from "../ui/Button";
 import { Logo } from "../ui/Logo";
 import styles from "./Header.module.css";
@@ -9,9 +8,7 @@ export const Header = () => {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.wrapper}>
-          <Link href="/" className={styles.logo}>
-            <Logo />
-          </Link>
+          <Logo className={styles.logo} />
 
           <div className={styles.right}>
             <Button>

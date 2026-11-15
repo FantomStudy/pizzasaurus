@@ -1,11 +1,17 @@
+import { clsx } from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Logo.module.css";
 
-export const Logo = () => {
+interface LogoProps {
+  className?: string;
+}
+
+export const Logo = ({ className }: LogoProps) => {
   return (
-    <div className={styles.logo}>
+    <Link href="/" className={clsx(styles.logo, className)}>
       <Image src="/logo.svg" alt="pizza" width={73} height={52} priority />
       <p>Pizzasaurus</p>
-    </div>
+    </Link>
   );
 };
