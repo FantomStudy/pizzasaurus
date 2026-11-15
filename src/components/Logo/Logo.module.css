@@ -1,0 +1,10 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo p {
+  font-size: 20px;
+  font-weight: 800;
+}

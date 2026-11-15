@@ -1,0 +1,32 @@
+:root {
+  --background: #fbfbfb;
+  --foreground: #0b0b0b;
+
+  --primary: #f14e1d;
+  --primary-foreground: #fbfbfb;
+
+  --secondary: #fff7ed;
+  --secondary-foreground: #f14e1d;
+  --secondary-border: #ffedd5;
+
+  --muted: #f5f5f5;
+  --muted-foreground: #0b0b0b;
+
+  --rounded-full: 9999px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito);
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 16px;
+}

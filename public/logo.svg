@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="56 20 302 214" role="img" aria-label="Pizzasaurus mascot"><title>Pizzasaurus mascot</title><g stroke="#422717" stroke-linejoin="round" stroke-linecap="round">
+<!-- pizza plates as separate smooth silhouettes -->
+<path d="M126 112 Q116 102 124 91 Q134 80 151 93 L164 110 Q155 124 139 127Z" fill="#ffcf76" stroke-width="6.5"/>
+<path d="M153 105 Q141 75 153 64 Q170 52 197 89 L205 111 Q182 123 163 119Z" fill="#ffd47d" stroke-width="7"/>
+<path d="M190 100 Q199 58 221 34 Q230 28 239 38 Q261 60 270 99 L257 120Z" fill="#ffd47d" stroke-width="7"/>
+<path d="M255 113 Q275 72 292 76 Q309 79 317 115 L306 135 Q284 139 264 128Z" fill="#ffcf76" stroke-width="7"/>
+<path d="M304 132 Q321 115 336 128 Q351 138 340 160 L320 172 L302 154Z" fill="#ffd47d" stroke-width="6.5"/>
+<!-- pepperoni -->
+<g fill="#ee6242" stroke="none">
+<circle cx="139" cy="106" r="6.3"/><circle cx="170" cy="86" r="7.5"/>
+<circle cx="232" cy="58" r="8"/><circle cx="215" cy="91" r="9"/><circle cx="251" cy="98" r="7"/>
+<circle cx="290" cy="106" r="8"/><circle cx="323" cy="143" r="6.6"/>
+</g>
+<!-- Body: gently imperfect but continuous bezier outline -->
+<path d="M126 122 C112 124 101 130 94 140 C80 160 87 178 101 186 C116 196 148 196 161 192 C171 192 172 201 177 212 C180 221 191 224 202 220 C213 218 216 211 220 197 C233 199 249 199 263 199 C266 214 273 220 284 219 C299 219 303 210 306 196 C322 196 341 192 346 185 C352 180 335 176 322 166 C304 155 296 146 285 136 C268 119 246 104 221 101 C190 97 166 111 149 119 C140 122 133 122 126 122Z" fill="#c2d26e" stroke-width="7.5"/>
+<!-- eyes and cheek -->
+<ellipse cx="128" cy="160" rx="5.5" ry="6.2" fill="#422717" stroke="none"/>
+<ellipse cx="151" cy="169" rx="8.5" ry="8" fill="#ffa45d" stroke="none"/>
+<!-- three orange accent marks -->
+<g fill="none" stroke="#fa8b39" stroke-width="6">
+<path d="M78 116 L65 111"/><path d="M84 99 L75 87"/><path d="M102 91 L100 79"/>
+</g>
+</g></svg>
