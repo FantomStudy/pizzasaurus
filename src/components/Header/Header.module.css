@@ -1,8 +1,16 @@
 .header {
+  position: sticky;
+  top: 0;
+  background-color: var(--background);
+  z-index: 1;
+}
+
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
+  margin-bottom: 8px;
 }
 
 .right {
@@ -16,7 +24,7 @@
 }
 
 @media (max-width: 768px) {
-  .header {
+  .wrapper {
     justify-content: end;
     margin-top: 0;
   }

@@ -6,26 +6,28 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   return (
-    <div className="container">
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>
-          <Logo />
-        </Link>
+    <header className={styles.header}>
+      <div className="container">
+        <div className={styles.wrapper}>
+          <Link href="/" className={styles.logo}>
+            <Logo />
+          </Link>
 
-        <div className={styles.right}>
-          <Button>
-            <ShoppingBag /> Корзина
-          </Button>
+          <div className={styles.right}>
+            <Button>
+              <ShoppingBag /> Корзина
+            </Button>
 
-          <Button variant="muted">Войти</Button>
+            <Button variant="muted">Войти</Button>
+          </div>
+
+          <div className={styles.mobileRight}>
+            <Button variant="muted" size="md">
+              Войти
+            </Button>
+          </div>
         </div>
-
-        <div className={styles.mobileRight}>
-          <Button variant="muted" size="md">
-            Войти
-          </Button>
-        </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
