@@ -1,0 +1,67 @@
+.dialog {
+  width: min(430px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 24px;
+
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: var(--surface);
+
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+
+  position: relative;
+
+  transition:
+    opacity 160ms ease-out,
+    transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    display 200ms allow-discrete,
+    overlay 200ms allow-discrete;
+}
+
+.dialog:open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@starting-style {
+  .dialog:open {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+}
+
+/* Затемнение страницы */
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0);
+
+  transition:
+    background 220ms,
+    display 220ms allow-discrete,
+    overlay 220ms allow-discrete;
+}
+
+.dialog:open::backdrop {
+  background: rgb(0 0 0 / 40%);
+}
+
+@starting-style {
+  .dialog:open::backdrop {
+    background: rgb(0 0 0 / 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog,
+  .dialog::backdrop {
+    transition-duration: 0.01ms;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
