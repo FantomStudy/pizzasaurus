@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { LoginDialogProvider } from "@/components/LoginDialog";
 import "@/styles/reset.css";
 import "@/styles/globals.css";
 
@@ -19,11 +20,13 @@ const RootLayout = ({ children }: LayoutProps<"/">) => {
   return (
     <html lang="ru" className={nunito.variable}>
       <body>
-        <div className="layout">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <LoginDialogProvider>
+          <div className="layout">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </LoginDialogProvider>
       </body>
     </html>
   );

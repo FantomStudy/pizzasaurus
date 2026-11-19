@@ -1,9 +1,14 @@
+"use client";
+
 import { ShoppingBag } from "lucide-react";
+import { useLoginDialog } from "../LoginDialog";
 import { Button } from "../ui/Button";
 import { Logo } from "../ui/Logo";
 import styles from "./Header.module.css";
 
 export const Header = () => {
+  const { openLoginDialog } = useLoginDialog();
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -15,7 +20,9 @@ export const Header = () => {
               <ShoppingBag /> Корзина
             </Button>
 
-            <Button variant="muted">Войти</Button>
+            <Button variant="muted" onClick={openLoginDialog}>
+              Войти
+            </Button>
           </div>
 
           <div className={styles.mobileRight}>
