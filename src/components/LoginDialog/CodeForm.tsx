@@ -40,7 +40,7 @@ export const CodeForm = ({ phone, onBack, onConfirm }: CodeFormProps) => {
         <h3>Введите код из мессенджера или СМС</h3>
 
         <div className={styles.subtitle}>
-          <p>на номер +7{phone}</p>
+          <p>на номер +7 {phone}</p>
           <Button variant="link" onClick={onBack}>
             Изменить
           </Button>

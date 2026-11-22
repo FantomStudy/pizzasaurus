@@ -1,5 +1,6 @@
 "use state";
 
+import { useMask } from "@siberiacancode/reactuse";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../ui/Button";
@@ -13,25 +14,39 @@ interface PhoneFormProps {
 }
 
 export const PhoneForm = ({ initialPhone, onConfirm }: PhoneFormProps) => {
-  const [phone, setPhone] = useState(initialPhone);
   const [error, setError] = useState("");
+
+  const phone = useMask("(999) 999-99-99", {
+    initialValue: initialPhone,
+    showMask: "never",
+    sanitize: (value) => {
+      const digits = value.replace(/\D/g, "");
+
+      if (digits.length === 11 && /^[78]/.test(digits)) {
+        return digits.slice(1);
+      }
+
+      return digits;
+    },
+  });
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
 
-    const value = phone.trim();
+    const value = phone.getValue("masked");
+    console.log(value);
 
     if (!value.length) {
       setError("Введите номер телефона");
       return;
     }
 
-    if (value.length !== 10) {
+    if (value.length < 15) {
       setError("Введите номер телефона полностью");
       return;
     }
 
-    onConfirm(phone);
+    onConfirm(value);
   };
 
   return (
@@ -44,14 +59,7 @@ export const PhoneForm = ({ initialPhone, onConfirm }: PhoneFormProps) => {
       <Field>
         <InputGroup>
           <InputGroupAddon>+7</InputGroupAddon>
-          <Input
-            type="tel"
-            name="phone"
-            placeholder="Номер телефона"
-            maxLength={10}
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
+          <Input type="tel" name="phone" placeholder="Номер телефона" {...phone.register()} />
         </InputGroup>
         {error && <FieldError>{error}</FieldError>}
       </Field>
