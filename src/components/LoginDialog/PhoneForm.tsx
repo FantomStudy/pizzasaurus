@@ -34,7 +34,6 @@ export const PhoneForm = ({ initialPhone, onConfirm }: PhoneFormProps) => {
     e.preventDefault();
 
     const value = phone.getValue("masked");
-    console.log(value);
 
     if (!value.length) {
       setError("Введите номер телефона");

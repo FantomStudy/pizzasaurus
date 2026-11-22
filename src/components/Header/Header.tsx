@@ -1,6 +1,8 @@
 "use client";
 
 import { ShoppingBag } from "lucide-react";
+import { useRef } from "react";
+import { CartSheet } from "../CartSheet";
 import { useLoginDialog } from "../LoginDialog";
 import { Button } from "../ui/Button";
 import { Logo } from "../ui/Logo";
@@ -8,6 +10,7 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   const { openLoginDialog } = useLoginDialog();
+  const shopRef = useRef<HTMLDialogElement>(null);
 
   return (
     <header className={styles.header}>
@@ -16,9 +19,11 @@ export const Header = () => {
           <Logo className={styles.logo} />
 
           <div className={styles.right}>
-            <Button>
+            <Button onClick={() => shopRef.current?.showModal()}>
               <ShoppingBag /> Корзина
             </Button>
+
+            <CartSheet ref={shopRef} />
 
             <Button variant="muted" onClick={openLoginDialog}>
               Войти

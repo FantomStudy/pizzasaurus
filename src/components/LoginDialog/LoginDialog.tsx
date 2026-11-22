@@ -23,7 +23,7 @@ export const LoginDialog = ({ ...props }: React.ComponentProps<typeof Dialog>) =
   return (
     <Dialog {...props}>
       <div className={styles.wrapper}>
-        {step === "phone" ? (
+        {step === "phone" && (
           <PhoneForm
             initialPhone={phone}
             onConfirm={(value: string) => {
@@ -31,7 +31,9 @@ export const LoginDialog = ({ ...props }: React.ComponentProps<typeof Dialog>) =
               setStep("code");
             }}
           />
-        ) : (
+        )}
+
+        {step === "code" && (
           <CodeForm phone={phone} onBack={() => setStep("phone")} onConfirm={onCodeConfirm} />
         )}
 
