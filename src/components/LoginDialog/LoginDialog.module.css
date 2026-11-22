@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 
   p,
   h3 {
@@ -20,6 +26,12 @@
   gap: 8px;
 }
 
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .legal {
   font-size: 12px;
   text-align: center;
@@ -27,6 +39,12 @@
   a {
     text-decoration: underline;
   }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .steps {
@@ -40,6 +58,7 @@
     background-color: var(--foreground);
     border-radius: var(--rounded-full);
     opacity: 0.4;
+    transition: opacity 150ms ease-out;
   }
 
   div[data-active="true"] {

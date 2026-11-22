@@ -52,10 +52,11 @@ const IndexPage = async () => {
             );
           })}
         </div>
-
-        <Link href="/" className={styles.promo}>
-          <Image src="/promo.png" alt="promo" width={282} height={365} />
-        </Link>
+        <div className={styles.promo}>
+          <Link href="/">
+            <Image src="/promo.png" alt="promo" width={282} height={365} />
+          </Link>
+        </div>
       </div>
     </div>
   );

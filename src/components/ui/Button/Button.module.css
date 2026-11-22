@@ -29,22 +29,6 @@
   flex-shrink: 0;
 }
 
-/* Variants */
-.primary {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-}
-
-.secondary {
-  background-color: var(--secondary);
-  color: var(--secondary-foreground);
-}
-
-.muted {
-  background-color: var(--muted);
-  color: var(--muted-foreground);
-}
-
 /* Sizes */
 .md {
   height: 40px;
@@ -76,5 +60,37 @@
   & > svg {
     width: 24px;
     height: 24px;
+  }
+}
+
+/* Variants */
+.primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.muted {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.link {
+  color: var(--primary);
+  background-color: transparent;
+  padding: 0;
+  height: auto;
+  border: none;
+
+  &:hover {
+    color: #b93208;
+  }
+
+  &:active {
+    scale: auto;
   }
 }

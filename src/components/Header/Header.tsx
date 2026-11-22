@@ -26,7 +26,7 @@ export const Header = () => {
           </div>
 
           <div className={styles.mobileRight}>
-            <Button variant="muted" size="md">
+            <Button variant="muted" size="md" onClick={openLoginDialog}>
               Войти
             </Button>
           </div>
