@@ -26,8 +26,8 @@ export const LoginDialog = ({ ...props }: React.ComponentProps<typeof Dialog>) =
         {step === "phone" ? (
           <PhoneForm
             initialPhone={phone}
-            onConfirm={(phone) => {
-              setPhone(phone);
+            onConfirm={(value: string) => {
+              setPhone(value);
               setStep("code");
             }}
           />
